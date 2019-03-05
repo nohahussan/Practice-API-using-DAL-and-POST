@@ -1,0 +1,31 @@
+﻿
+@model ApIPractice.Models.UserInput
+
+
+@using (Html.BeginForm("Index", "Home"))
+{
+    <div class="Row ">
+        <div class=" col-md-6">
+            <div>
+                <h2>NEKMovieDB</h2>
+
+                <p><h3>Movies! Movies! More Movies!</h3></p>
+
+                <p><h3>All Things Movies</h3></p>
+                <p>
+                    <h4>
+                        Best online source for all things movies! Database contains a complete comprehensive listings of movies. Search by Title and you'll be on your way!'
+                    </h4>
+                </p>
+            </div>
+            <div class="form-group">
+
+                @Html.LabelFor(m => m.Title, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+
+                <input type="submit" value="Search">
+            </div>
+        </div>
+    </div>
+}

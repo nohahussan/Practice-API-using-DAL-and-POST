@@ -1,0 +1,14 @@
+﻿@model IEnumerable<ApIPractice.Models.Post>
+<ul>
+    @foreach (var o in Model)
+    {
+
+        <li><h2>@o.Title</h2></li>
+        <li><h4>@o.Type</h4></li>
+        <li><h4>@o.Year</h4></li>
+
+        <li>
+            <img src="@o.Poster" />
+            </li>
+     }
+</ul>
